@@ -1,0 +1,34 @@
+import elm_general;
+import elm_list;
+
+class Elm.Search(Elm.Layout)
+{
+   data: Elm_Search_Data;
+   eo_prefix: elm_search;
+
+   methods {
+		// @property view_mode {
+		// 	set {
+		// 	}
+		// 	get {
+		// 	}
+		// 	values {
+		// 		mode: Elm.Search.View;
+		// 	}
+		// }
+		item_append {
+			params {
+				@in label: const(char)*;
+				@in func: Evas_Smart_Cb @optional;
+				@in func_data: const(void)* @optional;
+			}
+		}
+   }
+   implements {
+		class.constructor;
+		Eo.Base.constructor;
+		Eo.Base.destructor;
+		Evas.Object_Smart.add;
+		Evas.Object_Smart.del;
+	 }
+}
